@@ -1,9 +1,9 @@
-# [GrandPlus](https://telegram.me/GrandPlus)
+# [Plus](https://telegram.me/kenamch)
 
 # Developers!
 
 
-[mehran](https://github.com/mehmehran) ([Telegram](https://telegram.me/pythonscript))
+[saadgithub](https://github.com/saadmzed) ([Telegram](https://telegram.me/saad7m))
 * * *
 
 # Install source
@@ -11,9 +11,9 @@
 * * *
 cd $HOME
 
-git clone https://github.com/GrandTM/GrandPlus.git
+git clone https://github.com/saadmzed/Plus.git
 
-cd GrandPlus
+cd Plus
 
 chmod +x launch.sh
 
@@ -27,5 +27,5 @@ chmod +x launch.sh
 
 ### Our channel:
 
-[GrandTeam](https://telegram.me/GrandTeam)
+[kenamTeam](https://telegram.me/kenamch)
  
