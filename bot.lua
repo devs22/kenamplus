@@ -11,11 +11,10 @@ database = Redis.connect('127.0.0.1', 6379)
 notify = lgi.require('Notify')
 tdcli = dofile('tdcli.lua')
 notify.init ("Telegram updates")
-chats = {1126643850}
+chats = {}
 day = 86400
 --###############################--
-bot_id = {144729558}
-sudo_users = {30742221,30262506,144729558}
+sudo_users = {30742221,0}
 
 --##########GetMessage###########--
 local function getMessage(chat_id, message_id,callback)
