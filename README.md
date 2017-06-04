@@ -11,13 +11,15 @@
 * * *
 cd $HOME
 
-git clone https://github.com/saadmzed/Plus.git
+git clone https://github.com/saadmzed/kenamPlus.git
 
-cd Plus
+cd kenamPlus
 
 chmod +x launch.sh
 
-./launch.sh install
+chmod +x install.sh
+
+./install.sh
 
 ./launch.sh 
 
