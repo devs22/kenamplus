@@ -579,7 +579,7 @@ else
 end
 end
 
-if text == "اقفل الروابط" and is_momod(msg)  then
+if text == "lock links" and is_momod(msg)  then
 if redis:get(hashlink) == "Enable" then
 local text = "  وروح خالتي قافلن لتلح ☹️🖖"
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -589,7 +589,7 @@ else
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end
-if text == "افتح الروابط" and is_momod(msg)  then
+if text == "unlock links" and is_momod(msg)  then
 if not redis:get(hashlink) == "Enable" then
 local text = "✔️الروابط بالفعل مفتوحه✔️"
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -642,7 +642,7 @@ else
 end
 end
 
-if text == "اقفل التوجيه"  and is_momod(msg) then
+if text == "lock fwd"  and is_momod(msg) then
 if redis:get(hashforward) == "Enable" then
 local text = "التوجيه مقفول لتلح ☹️🖐"
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -652,7 +652,7 @@ else
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end
-if text == "افتح التوجيه" and is_momod(msg)  then
+if text == "unlock fwd" and is_momod(msg)  then
 if not redis:get(hashforward) == "Enable" then
 local text = "✔️اعادة التوجيه مفتوح✔️"
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -714,7 +714,7 @@ else
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end
-if text == "افتح الفواحش" and is_momod(msg)  then
+if text == "unlock fosh" and is_momod(msg)  then
 if not redis:get(hashbadword) == "Enable" then
 local text = "✔️الفواحش غير مقفوله✔"
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -889,7 +889,7 @@ if text == "unpin" and is_momod(msg)  then
 end
 if text == "help"  and is_momod(msg) then
 help = [[
-💠 kenam-bot Help 💠
+💠 kenam-plus Help 💠
 ︻︻︻︻︻︻︻︻︻︻︻︻︻︻
 🔹!setname {لوضع أسم }
 🔹!setphoto {لوضع صورة }
@@ -904,8 +904,10 @@ help = [[
 🔹!ban {لحظر عضو}
 
 🔐 أوامر القفل 🔐
-🔒!lock member {قفل الأضافة}
-🔓!unlock member {السماح بالأضافة}
+🔒!lock inline {قفل الشفافه}
+🔓!unlock inline {فتح الشفافه}
+🔒!lock tgservice {قفل الأضافة}
+🔓!unlock tgservice {السماح بالأضافة}
 🔒!lock links {قفل الروابط}
 🔓!unlock links {السماح بالروابط}
 🔒!lock spam {قفل الرسائل الطويلة}
@@ -919,8 +921,8 @@ help = [[
 🔒!lock flood {قفل التكرار}
 🔅!setflood + عدد تكرار الرسائل
 🔓!unlock flood {السماح بالتكرار}
-🔒!lock forwerd {قفل إعادة التوجيه}
-🔓!unlock forwerd {فتح إعادة التوجيه}
+🔒!lock fwd {قفل إعادة التوجيه}
+🔓!unlock fwd {فتح إعادة التوجيه}
 ⛔️!fiter + الكلمة المراد حظرها
 ✅unfiter+ فتح الكلمة المحظورة
 🗑!del{لحذف رسالة بالرد}
