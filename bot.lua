@@ -14,7 +14,7 @@ notify.init ("Telegram updates")
 chats = {}
 day = 86400
 --###############################--
-sudo_users = {30742221,0}
+sudo_users = {30742221,0} --- ايدي المطورين
 
 --##########GetMessage###########--
 local function getMessage(chat_id, message_id,callback)
@@ -363,7 +363,7 @@ if txet == "ban" and is_momod(msg) then
   function ban_reply(extra, result, success)
  redis:sadd('banned:'..result.chat_id_,result.sender_user_id_)
  tdcli.changeChatMemberStatus(result.chat_id_, result.sender_user_id_, 'Kicked')
-    tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'کاربر '..result.sender_user_id_..' به لیست افراد بن شده اضافه شد', 1, 'md')
+    tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'المستخدم'..result.sender_user_id_..' به لیست افراد بن شده اضافه شد', 1, 'md')
   end
 getMessage(chat_id,reply,ban_reply,nil)
 end
@@ -906,6 +906,12 @@ help = [[
 🔐 أوامر القفل 🔐
 🔒!lock inline {قفل الشفافه}
 🔓!unlock inline {فتح الشفافه}
+🔒!lock emoji {قفل الايموجي}
+🔓!unlock emoji {فتح الايموجي}
+🔒!lock username {قفل المعرف}
+🔓!unlock username {فتح المعرف}
+🔒!lock tag {قفل التاك}
+🔓!unlock tag {فتح التاك}
 🔒!lock tgservice {قفل الأضافة}
 🔓!unlock tgservice {السماح بالأضافة}
 🔒!lock links {قفل الروابط}
@@ -916,15 +922,15 @@ help = [[
 🔓!unlock arabic {السماح بالتكلم باللغة العربية}
 🔒!lock sticker {قفل الملصقات} 
 🔓!unlock sticker {السماح بالملصقات}
-🔒!lock contacts {قفل جهات الإتصال}
-🔓!unlock contacts {السماح بجهات الإتصال}
+🔒!lock contact {قفل جهات الإتصال}
+🔓!unlock contact {السماح بجهات الإتصال}
 🔒!lock flood {قفل التكرار}
 🔅!setflood + عدد تكرار الرسائل
 🔓!unlock flood {السماح بالتكرار}
 🔒!lock fwd {قفل إعادة التوجيه}
 🔓!unlock fwd {فتح إعادة التوجيه}
-⛔️!fiter + الكلمة المراد حظرها
-✅unfiter+ فتح الكلمة المحظورة
+⛔️!filter + الكلمة المراد حظرها
+✅unfilter+ فتح الكلمة المحظورة
 🗑!del{لحذف رسالة بالرد}
 
 🔕اوامر الكتم🔕
