@@ -15,15 +15,13 @@ git clone https://github.com/saadmzed/kenamPlus.git
 
 cd kenamPlus
 
-chmod +x launch.sh
-
-chmod +x install.sh
-
-./install.sh
-
-./launch.sh 
+sh install
 
 # Enter a phone number | confirmation code.
+
+and on cod
+
+git clone https://github.com/saadmzed/kenamPlus.git && cd kenamPlus && sh install 
 
 * * *
 
