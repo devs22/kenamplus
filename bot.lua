@@ -1162,6 +1162,23 @@ if text and text:match('^setflood (.*)$') and is_owner(msg) then
     redis:set('floodMax',text:match('setflood (.*)'))
           tdcli.sendMessage(msg.chat_id_, msg.id_, 1, '_تم ضبط عدد التكرارالى_ : *'..text:match('setflood (.*)')..'*', 1, 'md')
         end
+------------------------------reply-----------------------
+if text == "هلو" then
+saad = "هلوات حبي شلونك 😊☘️"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "شلونكم" then
+saad = "تمام يعمري وانته😽🍃"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "تمام" then
+saad = "عساها دوم مو يوم 🌝✨"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "دوم" then
+saad = "تدوم احبابك غلاي 😌🖐🏿"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
 ------------------------------------------saad7m-------------------------------------
 if text == "id" or text == "ايدي" then
   function dl_photo(arg,data)
