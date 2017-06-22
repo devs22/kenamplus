@@ -1168,7 +1168,7 @@ if text and text:match('^setflood (.*)$') and is_owner(msg) then
           tdcli.sendMessage(msg.chat_id_, msg.id_, 1, '_تم ضبط عدد التكرارالى_ : *'..text:match('setflood (.*)')..'*', 1, 'md')
         end
 ------------------------------reply-----------------------
-if text == "هلو" then
+if text == "هلو" or text == "هلاو" then
 saad = "هلوات حبي شلونك 😊☘️"
 tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
 end
@@ -1176,12 +1176,56 @@ if text == "شلونكم" then
 saad = "تمام يعمري وانته😽🍃"
 tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
 end
-if text == "تمام" then
+if text == "تمام" or text == "الحمدلله" then
 saad = "عساها دوم مو يوم 🌝✨"
 tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
 end
 if text == "دوم" then
 saad = "تدوم احبابك غلاي 😌🖐🏿"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "احبك" then
+saad = "وآنـي ۿـم احبـك ياعيـن عيـني ¦ 😻🍃ء"
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "اعشقك" then
+saad = " اؤوؤف شۿـال جفـاف ¦ 😹😻'ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "اكرهك" then
+saad = " ﭘــﺱ انـﻲ احبـک┋😞💖ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "تكرهني" then
+saad =  " طـبعاً مـا اكـرهك ¦ 😹✨'ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "باي" then
+saad = " اﻟﻟـﮧ'ه ويـاك حيـاتي┋💛💭ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "جاو" then
+saad = " اﻟﻟـﮧ'ه ويـاك حيـاتي┋💛💭ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "سلام" then
+saad = " سـلامات حـﺒﯥ┋💝✨ "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "هاي" then
+saad = " هـايـات يـروحـي┋🌸😻'ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "مرحبا" then
+saad =  " مـراحـݕ ياۿـلا┋ 💖😻'ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "انجب" then
+saad =  " انت انجب حيوان ¦ 😹✨'ء "
+tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
+end
+if text == "سعد" then
+saad = "فديته المطور ماتي¦ 😻✨"
 tdcli.sendMessage(msg.chat_id_, msg.id_, 1, saad, 1, 'md')
 end
 ------------------------------------------saad7m-------------------------------------
