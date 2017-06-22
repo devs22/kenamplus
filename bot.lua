@@ -931,8 +931,8 @@ local saad = [[
 ﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄
 🔸قفل الصوت
 🔸فتح الصوت 
-🔹lock links
-🔸unlock links
+🔹lock audio
+🔸unlock audio
 ﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄
 🔹قفل التاك
 🔸فتح التاك
