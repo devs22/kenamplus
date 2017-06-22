@@ -939,6 +939,11 @@ local saad = [[
 🔹lock tag
 🔸unlock tag
 ﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄
+🔹قفل المعرف
+🔸فتح المعرف
+🔹lock username
+🔸unlock username
+﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄﹃﹄		
 🔸قفل السمايل
 🔸فتح السمايل
 🔹 lock emoji
