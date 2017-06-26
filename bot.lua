@@ -269,7 +269,7 @@ if text == "بوت" or text == "كينام" then
   end
  --------------------
 local hashadd = "addedgp"..chat_id
-if text == "add" or text == "تفعيل" and is_sudo(msg) then
+if (text == "add" or text == "تفعيل") and is_sudo(msg) then
   if botgp then
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, '*المجموعه مضافه بالفعل 😾👊*', 1, 'md')
   else
@@ -277,7 +277,7 @@ if text == "add" or text == "تفعيل" and is_sudo(msg) then
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, '* تم اضافة المجموعه 😸🙌️*', 1, 'md')
   end
 end
-if text == "rem" or text == "تعطيل" and is_sudo(msg) then
+if (text == "rem" or text == "تعطيل") and is_sudo(msg) then
   if not botgp then
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, '*المجموعة ليست مضافة!*', 1, 'md')
   else
@@ -286,7 +286,7 @@ if text == "rem" or text == "تعطيل" and is_sudo(msg) then
   end
 end
 
-if text == "setowner" or text == "رفع مشرف" and is_sudo(msg) and msg.reply_to_message_id_ then
+if (text == "setowner" or text == "رفع مشرف") and is_sudo(msg) and msg.reply_to_message_id_ then
   function setowner_reply(extra, result, success)
     redis:del('owners:'..result.chat_id_)
     redis:set('owners:'..result.chat_id_,result.sender_user_id_)
@@ -321,14 +321,14 @@ if text and text:match('^setowner (.*)') and text:find('@') and is_owner(msg) th
 end
 
  
-if text == "promote" or text == "رفع مدير" and is_owner(msg)and msg.reply_to_message_id_ then
+if (text == "promote" or text == "رفع مدير") and is_owner(msg)and msg.reply_to_message_id_ then
   function setmod_reply(extra, result, success)
     redis:sadd('mods:'..result.chat_id_,result.sender_user_id_)
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'المستخدم '..result.sender_user_id_..' تمت الترقيه', 1, 'md')
   end
  getMessage(chat_id,msg.reply_to_message_id_,setmod_reply,nil)
 end
-if text == "demote" or text == "حذف مدير" and is_owner(msg) and msg.reply_to_message_id_ then
+if (text == "demote" or text == "حذف مدير") and is_owner(msg) and msg.reply_to_message_id_ then
   function remmod_reply(extra, result, success)
     redis:srem('mods:'..result.chat_id_,result.sender_user_id_)
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'المستخدم '..result.sender_user_id_..' لم يعد مدير', 1, 'md')
@@ -414,14 +414,14 @@ if text == "banlist" or text == "المحضورين" then
 end
   tdcli.sendMessage(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
-if text == "muteuser" or text == "كتم" and is_momod(msg) and msg.reply_to_message_id_ then
+if (text == "muteuser" or text == "كتم") and is_momod(msg) and msg.reply_to_message_id_ then
   function setmute_reply(extra, result, success)
     redis:sadd('muteusers:'..result.chat_id_,result.sender_user_id_)
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'المستخدم '..result.sender_user_id_..' تم الكتم', 1, 'md')
   end
 getMessage(chat_id,msg.reply_to_message_id_,setmute_reply,nil)
 end
-if text == "unmuteuser" or text == "الغاء كتم" and is_momod(msg) and msg.reply_to_message_id_ then
+if (text == "unmuteuser" or text == "الغاء كتم") and is_momod(msg) and msg.reply_to_message_id_ then
   function demute_reply(extra, result, success)
     redis:srem('muteusers:'..result.chat_id_,result.sender_user_id_)
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, 'المستخدم '..result.sender_user_id_..' تم رفع الكتم عنه', 1, 'md')
@@ -465,7 +465,7 @@ if text and text:match("^clean (.*)$") and is_momod(msg) then
 end
 
 end
-if text == "delall" or text == "مسح الكل" and msg.reply_to_message_id_ then
+if (text == "delall" or text == "مسح الكل") and msg.reply_to_message_id_ then
   function delall(extra, result, success)
     tdcli.deleteMessagesFromUser(result.chat_id_, result.sender_user_id_)
   end
